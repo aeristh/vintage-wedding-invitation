@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import CoverScreen from "@/components/cover/CoverScreen";
 import HeroSection from "@/components/sections/HeroSection";
@@ -18,6 +18,12 @@ import MusicPlayer, { MusicPlayerHandle } from "@/components/ui/MusicPlayer";
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState(false);
+  const musicRef = useRef<MusicPlayerHandle>(null);
+
+  const handleOpen = () => {
+    setIsOpened(true);
+    musicRef.current?.play();
+  };
 
   return (
     <>
@@ -25,7 +31,7 @@ export default function Home() {
         {!isOpened && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
             <div className="relative w-full h-full md:w-[430px] md:h-dvh overflow-hidden">
-              <CoverScreen key="cover" onOpen={() => setIsOpened(true)} />
+              <CoverScreen key="cover" onOpen={handleOpen} />
             </div>
           </div>
         )}
@@ -46,11 +52,12 @@ export default function Home() {
               <GiftSection />
               <WishesSection />
               <FooterSection />
-              <MusicPlayer />
             </>
           )}
         </div>
       </div>
+
+      <MusicPlayer ref={musicRef} />
     </>
   );
 }
