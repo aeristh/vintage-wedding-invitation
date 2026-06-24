@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1b140f;
+  --color-ink-light: #2a201a;
+  --color-paper: #f5efe2;
+  --color-paper-dark: #ece3d0;
+  --color-gold: #c9a86a;
+  --color-gold-soft: #e3d3ab;
+  --color-on-dark: #f3ead9;
+  --color-on-paper: #2b2118;
+  --color-dress-teal: #2f6f63;
+  --color-dress-burgundy: #7a2e3a;
+  --color-dress-sand: #c9a876;
+}
+
+.font-script { font-family: var(--font-script), cursive; }
+.font-display { font-family: var(--font-display), serif; }
+.font-body { font-family: var(--font-body), sans-serif; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: .25; transform: scale(.85); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+.star { animation: twinkle 3.2s ease-in-out infinite; }
+
+.notepad-card {
+  background-image: repeating-linear-gradient(
+    var(--color-paper) 0px,
+    var(--color-paper) 27px,
+    var(--color-gold-soft) 28px
+  );
+  background-color: var(--color-paper);
+}
+
+.polaroid-shadow {
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,.55);
+}
+ 
+.scroll-gold::-webkit-scrollbar { width: 3px; }
+.scroll-gold::-webkit-scrollbar-track { background: transparent; }
+.scroll-gold::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 106, 0.45);
+  border-radius: 999px;
+}
+.scroll-gold::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 106, 0.85);
+} 
+.scroll-gold { scrollbar-width: thin; scrollbar-color: rgba(201,168,106,0.45) transparent; }
