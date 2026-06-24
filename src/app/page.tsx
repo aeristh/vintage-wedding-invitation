@@ -30,7 +30,7 @@ export default function Home() {
       <AnimatePresence>
         {!isOpened && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
-            <div className="relative w-full h-full md:w-[430px] md:h-dvh overflow-hidden">
+            <div className="relative w-full h-full sm:w-[430px] sm:h-dvh overflow-hidden">
               <CoverScreen key="cover" onOpen={handleOpen} />
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function Home() {
       </AnimatePresence>
 
       <div className="w-full h-dvh bg-black overflow-y-auto scroll-gold">
-        <div className="relative min-h-dvh w-full md:w-[430px] mx-auto bg-ink">
+        <div className="relative min-h-dvh w-full sm:w-[430px] mx-auto bg-ink">
           {isOpened && (
             <>
               <HeroSection />

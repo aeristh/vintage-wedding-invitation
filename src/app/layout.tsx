@@ -7,7 +7,7 @@ const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "-
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display" });
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-body" });
 
-export const metadata: Metadata = { title: weddingData.meta.siteTitle };
+export const metadata: Metadata = { title: weddingData.meta.siteTitle, viewport: "width=device-width, initial-scale=1", };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -82,23 +82,23 @@ export default function CoverScreen({ onOpen }: { onOpen: () => void }) {
             <div className="absolute bottom-6 right-6" style={{ zIndex: 2, transform: "rotate(180deg)" }}><CornerOrn /></div>
 
             <div className="relative flex flex-col items-center gap-0" style={{ zIndex: 3 }}>
-                <motion.p className="font-display tracking-[0.45em] text-[10px] text-gold uppercase mb-6" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, delay: 0.3, ease: "easeOut" }}>
+                <motion.p className="font-display tracking-[0.45em] text-[12px] text-gold uppercase mb-6" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, delay: 0.3, ease: "easeOut" }}>
                     {cover.eyebrow}
                 </motion.p>
 
-                <motion.h1 className="font-script text-gold-soft leading-none" style={{ fontSize: "clamp(3.2rem, 14vw, 4.5rem)" }} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 0.6, ease: "easeOut" }}>
+                <motion.h1 className="font-script text-gold-soft leading-none" style={{ fontSize: "clamp(4rem, 18vw, 5rem)" }} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 0.6, ease: "easeOut" }}>
                     {couple.groom.nickname}
                 </motion.h1>
 
-                <motion.span className="font-script text-gold leading-none my-2" style={{ fontSize: "clamp(1.6rem, 7vw, 2.2rem)" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 0.9, ease: "easeOut" }}>
+                <motion.span className="font-script text-gold leading-none my-2" style={{ fontSize: "clamp(2rem, 9vw, 2.6rem)" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 0.9, ease: "easeOut" }}>
                     &amp;
                 </motion.span>
 
-                <motion.h1 className="font-script text-gold-soft leading-none" style={{ fontSize: "clamp(3.2rem, 14vw, 4.5rem)" }} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 1.1, ease: "easeOut" }}>
+                <motion.h1 className="font-script text-gold-soft leading-none" style={{ fontSize: "clamp(4rem, 18vw, 5rem)" }} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 1.1, ease: "easeOut" }}>
                     {couple.bride.nickname}
                 </motion.h1>
 
-                <motion.p className="font-display text-[11px] tracking-[0.4em] text-gold/70 mt-5 mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 1.4, ease: "easeOut" }}>
+                <motion.p className="font-display text-[13px] tracking-[0.4em] text-gold/70 mt-5 mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 1.4, ease: "easeOut" }}>
                     {hero.date.display}
                 </motion.p>
 
