@@ -18,7 +18,7 @@ function IgIcon() {
 
 function MirrorFrame({ src, alt }: { src: string; alt: string }) {
     return (
-        <div className="relative mx-auto" style={{ width: 230, height: 270 }}>
+        <div className="relative mx-auto" style={{ width: "min(230px, 65vw)", height: "min(270px, 76vw)" }}>
             <div className="absolute" style={{ top: "10%", left: "10%", width: "80%", height: "78%", borderRadius: "50%", overflow: "hidden", transform: "scaleY(1.12)" }}>
                 <img src={src} alt={alt} className="w-full h-full object-cover object-top" style={{ transform: "scaleY(0.893)" }} />
             </div>

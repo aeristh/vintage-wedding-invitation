@@ -89,7 +89,7 @@ export default function GallerySection() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-                <div className="relative flex items-center justify-center" style={{ height: 280 }} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+                <div className="relative flex items-center justify-center" style={{ height: "min(280px, 78vw)" }} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
                     {photos.map((photo, i) => {
                         const offset = i - current;
                         const t = getCardTransform(offset, total);
@@ -107,7 +107,7 @@ export default function GallerySection() {
                                 }}
                                 transition={{ type: "spring", stiffness: 260, damping: 28 }}
                                 style={{
-                                    width: 190,
+                                    width: "min(190px, 52vw)",
                                     background: "#f5efe2",
                                     padding: "9px 9px 34px",
                                     boxShadow: t.zIndex === 20
