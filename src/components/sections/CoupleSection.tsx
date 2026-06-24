@@ -18,8 +18,10 @@ function IgIcon() {
 
 function MirrorFrame({ src, alt }: { src: string; alt: string }) {
     return (
-        <div className="relative mx-auto" style={{ width: "min(230px, 65vw)", height: "min(270px, 76vw)" }}>
-            <div className="absolute" style={{ top: "10%", left: "10%", width: "80%", height: "78%", borderRadius: "50%", overflow: "hidden", transform: "scaleY(1.12)" }}>
+        <div className="relative mx-auto" style={{ width: "min(260px, 72vw)", height: "min(305px, 84vw)" }}>
+            <div className="absolute" style={{
+                top: "10%", left: "10%", width: "80%", height: "78%", borderRadius: "50%", overflow: "hidden", transform: "scaleY(1.12)"
+            }}>
                 <img src={src} alt={alt} className="w-full h-full object-cover object-top" style={{ transform: "scaleY(0.893)" }} />
             </div>
             <img src="/ornaments/frame.png" alt="" className="absolute inset-0 w-full h-full pointer-events-none select-none" style={{ objectFit: "fill" }} />
@@ -42,28 +44,34 @@ function PersonProfile({
 
     return (
         <ScrollReveal delay={delay} className="relative flex flex-col items-center text-center px-8">
-            <img src="/ornaments/birds.png" alt="" className="absolute pointer-events-none select-none opacity-80" style={{ width: 200, ...(isLeft ? { top: "-10%", left: "-22%", transform: "scaleX(1)" } : { top: "-10%", right: "-22%", transform: "scaleX(-1)" }) }} />
-            <img src="/ornaments/stars.png" alt="" className="absolute pointer-events-none select-none opacity-60" style={{ width: 80, ...(isLeft ? { top: "38%", right: "-8%", transform: "rotate(10deg)" } : { top: "38%", left: "-8%", transform: "scaleX(-1) rotate(-10deg)" }) }} />
-            <p className="font-display text-[11px] tracking-[0.45em] uppercase text-gold mb-4">
+            <img src="/ornaments/birds.png" alt="" className="absolute pointer-events-none select-none opacity-80" style={{ width: "min(200px, 55vw)", ...(isLeft ? { top: "-10%", left: "-22%", transform: "scaleX(1)" } : { top: "-10%", right: "-22%", transform: "scaleX(-1)" }) }} />
+            <img src="/ornaments/stars.png" alt="" className="absolute pointer-events-none select-none opacity-60" style={{ width: "min(80px, 22vw)", ...(isLeft ? { top: "38%", right: "-8%", transform: "rotate(10deg)" } : { top: "38%", left: "-8%", transform: "scaleX(-1) rotate(-10deg)" }) }} />
+
+            <p className="font-display uppercase text-gold" style={{ fontSize: "clamp(10px, 3vw, 12px)", letterSpacing: "0.45em", marginBottom: "1rem" }}>
                 {label}
             </p>
+
             <MirrorFrame src={person.photo} alt={person.fullName} />
-            <a href={`https://instagram.com/${person.instagram.replace("@", "")}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 mb-4 px-4 py-1.5 rounded-full border border-gold/40 hover:border-gold/80 hover:bg-gold/5 transition-all">
+
+            <a href={`https://instagram.com/${person.instagram.replace("@", "")}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 mb-4 px-4 py-1.5 rounded-full border border-gold/40 hover:border-gold/80 hover:bg-gold/5 transition-all" >
                 <IgIcon />
                 <span className="font-display tracking-widest text-gold" style={{ fontSize: "11px", lineHeight: 1, paddingTop: "1px" }}>
                     {person.instagram.replace("@", "")}
                 </span>
             </a>
-            <h3 className="font-script text-gold-soft leading-tight" style={{ fontSize: "clamp(2rem, 9vw, 2.8rem)" }}>
+
+            <h3 className="font-script text-gold-soft leading-tight" style={{ fontSize: "clamp(2.4rem, 10vw, 3rem)" }}>
                 {person.fullName}
             </h3>
-            <img src="/ornaments/divider.png" alt="" className="w-32 mx-auto opacity-70 my-0" />
+
+            <img src="/ornaments/divider.png" alt="" className="mx-auto opacity-70 my-0" style={{ width: "clamp(7rem, 35vw, 8rem)" }} />
+
             <div className="flex flex-col items-center gap-0.5">
-                <p className="font-display text-[10px] tracking-[0.3em] uppercase text-gold/70">
+                <p className="font-display uppercase text-gold/70" style={{ fontSize: "clamp(9px, 2.5vw, 11px)", letterSpacing: "0.3em" }}>
                     {person.order} dari
                 </p>
-                <p className="font-body text-on-dark/50 text-[11px] mt-1.5">{person.father}</p>
-                <p className="font-body text-on-dark/50 text-[11px]">&amp; {person.mother}</p>
+                <p className="font-body text-on-dark/50" style={{ fontSize: "clamp(11px, 3vw, 13px)", marginTop: "0.375rem" }}>{person.father}</p>
+                <p className="font-body text-on-dark/50" style={{ fontSize: "clamp(11px, 3vw, 13px)" }}>&amp; {person.mother}</p>
             </div>
         </ScrollReveal>
     );
@@ -83,16 +91,15 @@ const ambientStars = [
 export default function CoupleSection() {
     return (
         <section className="relative bg-ink py-14 overflow-hidden">
-
             {ambientStars.map((s, i) => (
                 <motion.img key={i} src="/ornaments/star.png" alt="" className="absolute pointer-events-none select-none" style={{ top: s.top, left: s.left, width: s.size, height: s.size }} animate={{ opacity: [0.15, 0.85, 0.15] }} transition={{ duration: s.dur, delay: i * 0.25, repeat: Infinity, ease: "easeInOut" }} />
             ))}
 
             <ScrollReveal className="text-center px-8 mb-10">
-                <h2 className="font-script text-gold-soft leading-tight mb-2" style={{ fontSize: "clamp(2.2rem, 10vw, 3rem)" }}>
+                <h2 className="font-script text-gold-soft leading-tight mb-2" style={{ fontSize: "clamp(2.6rem, 12vw, 3.2rem)" }}>
                     {coupleSection.title}
                 </h2>
-                <p className="font-body text-on-dark/50 text-[11px] tracking-wide">
+                <p className="font-body text-on-dark/50" style={{ fontSize: "clamp(11px, 3vw, 12px)", letterSpacing: "0.05em" }}>
                     {coupleSection.subtitle}
                 </p>
             </ScrollReveal>

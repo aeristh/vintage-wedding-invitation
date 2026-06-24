@@ -82,39 +82,39 @@ export default function CoverScreen({ onOpen }: { onOpen: () => void }) {
             <div className="absolute bottom-6 right-6" style={{ zIndex: 2, transform: "rotate(180deg)" }}><CornerOrn /></div>
 
             <div className="relative flex flex-col items-center gap-0" style={{ zIndex: 3 }}>
-                <motion.p className="font-display tracking-[0.45em] text-[12px] text-gold uppercase mb-6" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, delay: 0.3, ease: "easeOut" }}>
+                <motion.p className="font-display uppercase text-gold" style={{ fontSize: "clamp(10px, 3vw, 13px)", letterSpacing: "clamp(0.2em, 1vw, 0.45em)", marginBottom: "1.5rem" }} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, delay: 0.3, ease: "easeOut" }} >
                     {cover.eyebrow}
                 </motion.p>
 
-                <motion.h1 className="font-script text-gold-soft leading-none" style={{ fontSize: "clamp(4rem, 18vw, 5rem)" }} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 0.6, ease: "easeOut" }}>
+                <motion.h1 className="font-script text-gold-soft leading-none" style={{ fontSize: "clamp(5rem, 22vw, 6rem)" }} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 0.6, ease: "easeOut" }} >
                     {couple.groom.nickname}
                 </motion.h1>
 
-                <motion.span className="font-script text-gold leading-none my-2" style={{ fontSize: "clamp(2rem, 9vw, 2.6rem)" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 0.9, ease: "easeOut" }}>
+                <motion.span className="font-script text-gold leading-none my-2" style={{ fontSize: "clamp(2.5rem, 11vw, 3rem)" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 0.9, ease: "easeOut" }}>
                     &amp;
                 </motion.span>
 
-                <motion.h1 className="font-script text-gold-soft leading-none" style={{ fontSize: "clamp(4rem, 18vw, 5rem)" }} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 1.1, ease: "easeOut" }}>
+                <motion.h1 className="font-script text-gold-soft leading-none" style={{ fontSize: "clamp(5rem, 22vw, 6rem)" }} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1, delay: 1.1, ease: "easeOut" }}>
                     {couple.bride.nickname}
                 </motion.h1>
 
-                <motion.p className="font-display text-[13px] tracking-[0.4em] text-gold/70 mt-5 mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 1.4, ease: "easeOut" }}>
+                <motion.p className="font-display text-gold/70" style={{ fontSize: "clamp(12px, 3.5vw, 14px)", letterSpacing: "0.4em", marginTop: "1.25rem", marginBottom: "1rem" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 1.4, ease: "easeOut" }} >
                     {hero.date.display}
                 </motion.p>
 
-                <motion.div className="flex items-center mb-5" initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: 1, scaleX: 1 }} transition={{ duration: 0.9, delay: 1.6, ease: "easeOut" }}>
-                    <img src="/ornaments/divider.png" alt="divider" className="w-28 opacity-60" />
+                <motion.div className="flex items-center mb-5" initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: 1, scaleX: 1 }} transition={{ duration: 0.9, delay: 1.6, ease: "easeOut" }} >
+                    <img src="/ornaments/divider.png" alt="divider" style={{ width: "clamp(7rem, 35vw, 8rem)", opacity: 0.6 }} />
                 </motion.div>
 
-                <motion.p className="font-display text-[11px] tracking-[0.25em] text-on-dark/60 mb-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 1.8, ease: "easeOut" }}>
+                <motion.p className="font-display text-on-dark/60" style={{ fontSize: "clamp(10px, 2.8vw, 12px)", letterSpacing: "0.25em", marginBottom: "0.25rem" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 1.8, ease: "easeOut" }} >
                     {cover.invitedLabel}
                 </motion.p>
 
-                <motion.p className="font-display text-sm tracking-wide text-gold-soft mb-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 1.9, ease: "easeOut" }}>
+                <motion.p className="font-display text-gold-soft" style={{ fontSize: "clamp(13px, 3.8vw, 15px)", letterSpacing: "0.05em", marginBottom: "2.5rem" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.0, delay: 1.9, ease: "easeOut" }} >
                     Tamu Undangan
                 </motion.p>
 
-                <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={onOpen} className="font-display text-[11px] tracking-[0.3em] uppercase border border-gold/70 text-gold-soft px-10 py-3.5 rounded-full hover:bg-gold/10 transition-colors" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, delay: 2.1, ease: "easeOut" }}>
+                <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={onOpen} className="font-display uppercase border border-gold/70 text-gold-soft rounded-full hover:bg-gold/10 transition-colors" style={{ fontSize: "clamp(10px, 2.8vw, 12px)", letterSpacing: "0.3em", padding: "clamp(10px, 3vw, 14px) clamp(28px, 10vw, 40px)" }} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, delay: 2.1, ease: "easeOut" }} >
                     {cover.buttonLabel}
                 </motion.button>
             </div>
